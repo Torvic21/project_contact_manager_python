@@ -1,5 +1,15 @@
+contacts = {}
+def add_contact(name, phone, email)
+    if phone in contacts:
+        return f"Error: Contact '{name}' already exists."
+    new_contact = contacts.update({{"phone": phone, "email": email}})
+    return f"Success: Contact '{name}' has been added."
+
 def main():
-    print("Hello, World!")
+    print(add_contact("Alice", "555-1234", "alice@email.com"))
+    print(add_contact("Bob", "555-5678", "bob@email.com"))
+    print(add_contact("Alice", "555-9999", "alice2@email.com"))
+
 
 
 if __name__ == "__main__":
