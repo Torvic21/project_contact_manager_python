@@ -2,7 +2,7 @@ contacts = {}
 def add_contact(name, phone, email)
     if name in contacts:
         return f"Error: Contact '{name}' already exists."
-    contact[name] = {"phone": phone, "email": email}
+    contacts[name] = {"phone": phone, "email": email}
     return f"Success: Contact '{name}' has been added."
 
 def main():
