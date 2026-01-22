@@ -1,8 +1,8 @@
 contacts = {}
 def add_contact(name, phone, email)
-    if phone in contacts:
+    if name in contacts:
         return f"Error: Contact '{name}' already exists."
-    new_contact = contacts.update({{"phone": phone, "email": email}})
+    contact[name] = {"phone": phone, "email": email}
     return f"Success: Contact '{name}' has been added."
 
 def main():
